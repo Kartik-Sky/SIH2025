@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Registration Portal</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hospital Registration Portal</h1>
+        <div class="form-container">
+            <h2>Register or Update Hospital</h2>
+            <form id="registrationForm">
+                <input type="number" id="hospitalId" placeholder="Hospital ID" required><br />
+                <input type="text" id="name" placeholder="Hospital Name" required><br />
+                <input type="text" id="location" placeholder="Location" required><br />
+                <input type="text" id="coordinates" placeholder="Coordinates" required><br />
+                <input type="text" id="licenseNumber" placeholder="License Number" required><br />
+                <button type="button" onclick="registerHospital()">Register/Update</button>
+            </form>
+        </div>
+        <div class="form-container">
+            <h2>Get Hospital Details</h2>
+            <input type="number" id="queryId" placeholder="Hospital ID" required><br />
+            <button type="button" onclick="getHospital()">Get Details</button>
+            <div id="hospitalDetails" class="hidden data"></div>
+
+            <h2>All Hospital Details</h2>
+            <div id="hospitalAllDetails" class="hidden data"></div>
+            <button type="button" onclick="getAllHospitals()">Get All Details</button>
+
+        </div>
+    </div>   
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

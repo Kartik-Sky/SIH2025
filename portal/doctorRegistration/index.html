@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration Portal</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Doctor Registration Portal</h1>
+
+        <!-- Register or Update Doctor Section -->
+        <div class="form-container">
+            <h2>Register or Update Doctor</h2>
+            <form id="registrationForm">
+                <input type="number" id="doctorId" placeholder="Doctor ID" required><br />
+                <input type="text" id="name" placeholder="Doctor Name" required><br />
+                <input type="text" id="location" placeholder="Location" required><br />
+                <input type="text" id="licenseNumber" placeholder="License Number" required><br />
+                <input type="text" id="specializations" placeholder="Specializations (comma-separated)" required><br />
+                <button type="button" onclick="registerDoctor()">Register/Update</button>
+            </form>
+        </div>
+
+        <!-- Get Doctor Details Section -->
+        <div class="form-container">
+            <h2>Get Doctor Details</h2>
+            <input type="number" id="queryId" placeholder="Doctor ID" required><br />
+            <button type="button" onclick="getDoctor()">Get Details</button>
+            <div id="doctorDetails" class="hidden"></div>
+
+            <!-- Get All Doctors Section -->
+            <h2>Get All Doctor Details</h2>
+            <button type="button" onclick="getAllDoctors()">Get All Doctors</button>
+            <div id="doctorAllDetails" class="hidden"></div>
+
+            <!-- Filter Doctors by Specialization -->
+            <h2>Get Doctors by Specialization</h2>
+            <input type="text" id="specializationFilter" placeholder="Specialization" required><br />
+            <button type="button" onclick="getDoctorsBySpecialization()">Get Doctors</button>
+            <div id="doctorBySpecializationDetails" class="hidden"></div>
+
+            <!-- Filter Doctors by Location -->
+            <h2>Get Doctors by Location</h2>
+            <input type="text" id="locationFilter" placeholder="Location" required><br />
+            <button type="button" onclick="getDoctorsByLocation()">Get Doctors</button>
+            <div id="doctorByLocationDetails" class="hidden"></div>
+        </div>
+    </div>   
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
