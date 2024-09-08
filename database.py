@@ -86,6 +86,41 @@ def create_appointments_table():
     conn.close()
 
 
+def insert_patient(first_name, last_name, dob, gender, phone, address, email, emergency_contact_name, emergency_contact_no, allergies, medical_history):
+    """Insert a new patient into the Patient table."""
+    conn = sqlite3.connect('healthcare.db')
+    cursor = conn.cursor()
+
+    cursor.execute('''
+        INSERT INTO Patient (
+            first_name, last_name, dob, gender, phone, address, email, 
+            emergency_contact_name, emergency_contact_no, allergies, medical_history
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ''', (first_name, last_name, dob, gender, phone, address, email,
+          emergency_contact_name, emergency_contact_no, allergies, medical_history))
+
+    conn.commit()
+    conn.close()
+
+
+
+def insert_appointment(hospital_id, patient_id, doctor_id, doctor_type, doctor_name, patient_name, hospital_name, location):
+    """Insert a new appointment into the Appointments table."""
+    conn = sqlite3.connect('healthcare.db')
+    cursor = conn.cursor()
+
+    cursor.execute('''
+        INSERT INTO Appointments (
+            hospital_id, patient_id, doctor_id, doctor_type, doctor_name, 
+            patient_name, hospital_name, location
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    ''', (hospital_id, patient_id, doctor_id, doctor_type, doctor_name,
+          patient_name, hospital_name, location))
+
+    conn.commit()
+    conn.close()
+
+
 # Call the function to create the table
 create_num_table()
 
