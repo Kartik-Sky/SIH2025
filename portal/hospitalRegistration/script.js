@@ -1,4 +1,4 @@
-const path = 'http://192.168.142.156:5500/build/contracts/HospitalRegistration.json';
+const path = 'http://192.168.142.175:5500/build/contracts/HospitalRegistration.json';
 
 async function loadContractData() {
   try {
@@ -32,7 +32,7 @@ async function loadContractData() {
   if (contractData) {
     const { contractAddress, contractABI } = contractData;
 
-    const web3 = new Web3(Web3.givenProvider || "http://192.168.142.156:7545");
+    const web3 = new Web3(Web3.givenProvider || "http://192.168.142.175:7545");
 
     window.addEventListener('load', async () => {
       if (window.ethereum) {

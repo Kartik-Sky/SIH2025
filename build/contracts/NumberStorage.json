@@ -25,12 +25,13 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_number\",\"type\":\"uint256\"}],\"name\":\"setNumber\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/NumberStorage.sol\":\"NumberStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/NumberStorage.sol\":{\"keccak256\":\"0xfffda128dac977359a3b36c25edcd5dce5164b666dcb28c82f8c3e7bae9e4330\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://04a1c6c95dd16e2c972a0bd6713ce846f12ef675f8e9706f42ca3732412044f2\",\"dweb:/ipfs/QmcoRLbddEsxHDnvcpUJaQ7naQaiUke4oHFUKwG58vXw9Z\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060c38061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80633fb5c1cb146037578063f2c9ecd8146048575b600080fd5b60466042366004606d565b6062565b005b604e6067565b604051605991906084565b60405180910390f35b600055565b60005490565b600060208284031215607d578081fd5b5035919050565b9081526020019056fea2646970667358221220c44b07770d7f41270ab499855851debe6c70455433b3e43560788bff95dd418064736f6c63430008000033",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80633fb5c1cb146037578063f2c9ecd8146048575b600080fd5b60466042366004606d565b6062565b005b604e6067565b604051605991906084565b60405180910390f35b600055565b60005490565b600060208284031215607d578081fd5b5035919050565b9081526020019056fea2646970667358221220c44b07770d7f41270ab499855851debe6c70455433b3e43560788bff95dd418064736f6c63430008000033",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_number\",\"type\":\"uint256\"}],\"name\":\"setNumber\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/NumberStorage.sol\":\"NumberStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/NumberStorage.sol\":{\"keccak256\":\"0x7739c9a686e0af9ba36f7cfff7f278f753543f3948d9323d041bcd3fa009e95c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://edcdb462acf715bac37a35be043d6136a27b64bd30601d4f7cd257eaf100171a\",\"dweb:/ipfs/QmbwcFT6183piUknc9UKtUBTxh9D4g72bAMG53oPk13BEC\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060c38061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80633fb5c1cb146037578063f2c9ecd8146048575b600080fd5b60466042366004606d565b6062565b005b604e6067565b604051605991906084565b60405180910390f35b600055565b60005490565b600060208284031215607d578081fd5b5035919050565b9081526020019056fea264697066735822122072d2f9e33b82d174a282dfd69a1c94afd5e6f8b9332fdf8e105ece8a58e5d60564736f6c63430008000033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80633fb5c1cb146037578063f2c9ecd8146048575b600080fd5b60466042366004606d565b6062565b005b604e6067565b604051605991906084565b60405180910390f35b600055565b60005490565b600060208284031215607d578081fd5b5035919050565b9081526020019056fea264697066735822122072d2f9e33b82d174a282dfd69a1c94afd5e6f8b9332fdf8e105ece8a58e5d60564736f6c63430008000033",
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [
@@ -278,10 +279,10 @@
       "name": "#utility.yul"
     }
   ],
-  "sourceMap": "60:333:2:-:0;;;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "60:333:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;162:84;;;;;;:::i;:::-;;:::i;:::-;;301:89;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;162:84;216:12;:22;162:84::o;301:89::-;343:7;370:12;301:89;:::o;14:190:3:-;;126:2;114:9;105:7;101:23;97:32;94:2;;;147:6;139;132:22;94:2;-1:-1:-1;175:23:3;;84:120;-1:-1:-1;84:120:3:o;209:177::-;355:25;;;343:2;328:18;;310:76::o",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract NumberStorage {\r\n    uint256 private storedNumber;\r\n\r\n    // Function to store a number\r\n    function setNumber(uint256 _number) public {\r\n        storedNumber = _number;\r\n    }\r\n\r\n    // Function to retrieve the stored number\r\n    function getNumber() public view returns (uint256) {\r\n        return storedNumber;\r\n    }\r\n}\r\n",
-  "sourcePath": "F:\\Python\\sih-hackathon\\contracts\\NumberStorage.sol",
+  "sourceMap": "57:321:2:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "57:321:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;155:82;;;;;;:::i;:::-;;:::i;:::-;;289:87;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;155:82;208:12;:22;155:82::o;289:87::-;331:7;357:12;289:87;:::o;14:190:3:-;;126:2;114:9;105:7;101:23;97:32;94:2;;;147:6;139;132:22;94:2;-1:-1:-1;175:23:3;;84:120;-1:-1:-1;84:120:3:o;209:177::-;355:25;;;343:2;328:18;;310:76::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract NumberStorage {\n    uint256 private storedNumber;\n\n    // Function to store a number\n    function setNumber(uint256 _number) public {\n        storedNumber = _number;\n    }\n\n    // Function to retrieve the stored number\n    function getNumber() public view returns (uint256) {\n        return storedNumber;\n    }\n}\n",
+  "sourcePath": "/run/media/vedansh/nvme0n1p5/sih-hackathon/contracts/NumberStorage.sol",
   "ast": {
     "absolutePath": "project:/contracts/NumberStorage.sol",
     "exportedSymbols": {
@@ -302,7 +303,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:23:2"
+        "src": "32:23:2"
       },
       {
         "abstract": false,
@@ -324,7 +325,7 @@
             "name": "storedNumber",
             "nodeType": "VariableDeclaration",
             "scope": 745,
-            "src": "90:28:2",
+            "src": "86:28:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -335,7 +336,7 @@
               "id": 725,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "90:7:2",
+              "src": "86:7:2",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -347,7 +348,7 @@
             "body": {
               "id": 735,
               "nodeType": "Block",
-              "src": "205:41:2",
+              "src": "198:39:2",
               "statements": [
                 {
                   "expression": {
@@ -362,7 +363,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 726,
-                      "src": "216:12:2",
+                      "src": "208:12:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -376,13 +377,13 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 728,
-                      "src": "231:7:2",
+                      "src": "223:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "216:22:2",
+                    "src": "208:22:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -390,7 +391,7 @@
                   },
                   "id": 734,
                   "nodeType": "ExpressionStatement",
-                  "src": "216:22:2"
+                  "src": "208:22:2"
                 }
               ]
             },
@@ -412,7 +413,7 @@
                   "name": "_number",
                   "nodeType": "VariableDeclaration",
                   "scope": 736,
-                  "src": "181:15:2",
+                  "src": "174:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -423,7 +424,7 @@
                     "id": 727,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "181:7:2",
+                    "src": "174:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -432,16 +433,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "180:17:2"
+              "src": "173:17:2"
             },
             "returnParameters": {
               "id": 730,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "205:0:2"
+              "src": "198:0:2"
             },
             "scope": 745,
-            "src": "162:84:2",
+            "src": "155:82:2",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
@@ -450,7 +451,7 @@
             "body": {
               "id": 743,
               "nodeType": "Block",
-              "src": "352:38:2",
+              "src": "340:36:2",
               "statements": [
                 {
                   "expression": {
@@ -459,7 +460,7 @@
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
                     "referencedDeclaration": 726,
-                    "src": "370:12:2",
+                    "src": "357:12:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -468,7 +469,7 @@
                   "functionReturnParameters": 740,
                   "id": 742,
                   "nodeType": "Return",
-                  "src": "363:19:2"
+                  "src": "350:19:2"
                 }
               ]
             },
@@ -483,7 +484,7 @@
               "id": 737,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "319:2:2"
+              "src": "307:2:2"
             },
             "returnParameters": {
               "id": 740,
@@ -496,7 +497,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 744,
-                  "src": "343:7:2",
+                  "src": "331:7:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -507,7 +508,7 @@
                     "id": 738,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "343:7:2",
+                    "src": "331:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -516,20 +517,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "342:9:2"
+              "src": "330:9:2"
             },
             "scope": 745,
-            "src": "301:89:2",
+            "src": "289:87:2",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
         "scope": 746,
-        "src": "60:333:2"
+        "src": "57:321:2"
       }
     ],
-    "src": "33:362:2"
+    "src": "32:347:2"
   },
   "compiler": {
     "name": "solc",
@@ -539,12 +540,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xd393c167A402b595AD81f7e6fd9191280e442c9c",
-      "transactionHash": "0xb8ed7b6ca4ef3880e39ee49b9b7061aa73617961bad18026d6b87230343c2fc0"
+      "address": "0x07991457eCcE281A86952f4B0b09aDfe6399512C",
+      "transactionHash": "0x3ea34f9440bdd6ac8f5d7d91cfb45e92da8f364aa76a7a8f49ffe58f89e93234"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-09-08T19:46:23.383Z",
+  "updatedAt": "2024-09-08T20:38:09.851Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},

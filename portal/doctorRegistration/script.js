@@ -1,4 +1,4 @@
-const path = 'http://192.168.142.156:5500/build/contracts/DoctorRegistration.json'; // Adjust this path if necessary
+const path = 'http://192.168.142.175:5500/build/contracts/DoctorRegistration.json'; // Adjust this path if necessary
 
 async function loadContractData() {
     try {
@@ -23,7 +23,7 @@ async function loadContractData() {
         console.log("Contract Address:", contractAddress);
         console.log("Contract ABI:", contractABI);
 
-        const web3 = new Web3(Web3.givenProvider || "http://192.168.142.156:7545");
+        const web3 = new Web3(Web3.givenProvider || "http://192.168.142.175:7545");
         const contract = new web3.eth.Contract(contractABI, contractAddress);
 
         window.registerDoctor = async function() {
