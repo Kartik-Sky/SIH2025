@@ -7,7 +7,6 @@ from database import write_num_db
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 UPLOAD_FOLDER = "content"
-static_path = "E:\\Projects\\SIH 24\\app.py"
 
 
 @app.route('/', methods=['GET'])
