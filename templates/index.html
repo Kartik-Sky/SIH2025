@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Upload Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <!-- File Upload -->
+        <h1>File Upload Test</h1>
+        <img src="{{ url_for('static', filename='images/test.png') }}" alt="Test Image">
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <input type="file" name="file" required>
+            <button type="submit">Upload</button>
+        </form>
+
+        <!-- Save Number Form -->
+        <h2>Save a Number</h2>
+        <form action="/save" method="POST">
+            <input type="number" name="number" placeholder="Enter a number" required>
+            <br>
+            <button type="submit">Save Num</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

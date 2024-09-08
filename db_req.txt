@@ -1,0 +1,26 @@
+Patient:
+    * ID
+    First name
+    Last name
+    DOB
+    Gender
+    Phone
+    Address : list
+    email
+    emergency contact name
+    emergency contact no
+    allergies list
+    medical history list
+
+Appointments:
+    * Hospital ID
+    * Patient ID
+    * Doctor ID
+    Dr type
+    Dr name
+    patient name
+    Hospital name
+    location
+    
+
+
