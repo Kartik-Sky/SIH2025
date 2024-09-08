@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #d0edde;
+            margin: 0;
+            padding: 20px;
+            color: #100f0f;
+        }
+
+        .patient-profile {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 8px 30px rgba(30, 24, 97, 0.1);
+            transition: transform 0.3s;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+        }
+
+        .patient-profile:hover {
+            transform: scale(1.02);
+        }
+
+        .profile-photo {
+            text-align: center;
+        }
+
+        .profile-photo img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid #2eb178;
+        }
+
+        .profile-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h2 {
+            color: #37b681;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+            grid-column: 1 / -1;
+            border-bottom: 2px solid #30cca2;
+            padding-bottom: 10px;
+        }
+
+        .profile-detail {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #063d1f;
+        }
+
+        .profile-detail strong {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .profile-detail span {
+            color: #555;
+        }
+
+        .edit-button {
+            background-color: #1a9842;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            grid-column: 1 / -1;
+        }
+
+        .edit-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .patient-profile {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .edit-button {
+                font-size: 14px;
+            }
+
+            .profile-photo img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="patient-profile">
+        <h2>Patient Profile</h2>
+        <div class="profile-photo">
+            <img src="profilephoto.jpeg" alt="Profile Photo">
+        </div>
+        <div class="profile-details">
+            <div class="profile-detail">
+                <strong>Name:</strong>
+                <span>John Doe</span>
+            </div>
+            <div class="profile-detail">
+                <strong>Phone Number:</strong>
+                <span>(123) 456-7890</span>
+            </div>
+            <div class="profile-detail">
+                <strong>Email:</strong>
+                <span>john.doe@example.com</span>
+            </div>
+            <div class="profile-detail">
+                <strong>Date of Birth:</strong>
+                <span>January 1, 1990</span>
+            </div>
+            <div class="profile-detail">
+                <strong>Allergies:</strong>
+                <span>Peanuts, Shellfish</span>
+            </div>
+            <div class="profile-detail">
+                <strong>Medical History:</strong>
+                <span>Asthma, Hypertension</span>
+            </div>
+        
+        <div class="profile-detail">
+            <strong>Gender</strong>
+            <span>Male</span>
+        </div>
+        <div class="profile-detail">
+            <strong>Address</strong>
+            <span>Flat no. 264, sigma street</span>
+        </div>
+    </div>
+        <button class="edit-button" onclick="alert('Edit feature coming soon!')">Edit Profile</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,437 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F7F9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 20%;
+  background-image: url('sidebar.png'); /* Replace with the path to your background image */
+  background-size: cover; /* Ensures the background image covers the whole sidebar */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  color: white; 
+  height: auto;
+  
+  }
+  /* New styles to manage content visibility */
+.sidebar-content {
+    display: none;
+  }
+  
+  .sidebar-content.active {
+    display: block;
+  }
+  
+  .sidebar button {
+    background-color: #5FD068;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100px;
+    font-size: 10px;
+  }
+  
+  .main-content {
+    display: grid ;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-area: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    width:199;
+   
+    gap: 10px;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  .calendar {
+    grid-column: 3;
+    grid-row:2 ;
+    max-width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    grid-column: 1 /span 3;
+  
+    width: 100%;
+   
+   
+    margin-bottom: 20px;
+  }
+  
+  .header h2 {
+    margin: 0;
+  }
+  
+  .appointment, .activities {
+   
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .appointment .details {
+  
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .progress-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .progress {
+    background-color: #e0ffe0;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  
+  .list {
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .segmented-control {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .segmented-control button {
+    flex: 1;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .segmented-control button.active {
+    background-color: #5FD068;
+    color: white;
+  }
+  
+  .segmented-control button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .segmented-control button:not(:last-child) {
+    border-right: 1px solid #ccc;
+  }
+  
+  /* Avatar Styles */
+  .avatar-container {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 20px;
+    
+    
+  }
+  
+  .avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 80px;
+  }
+  
+  .avatar-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-left: 70px;
+  }
+  
+
+  /* Avatar and basic styles (your previous styles here) */
+
+.prescription-card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .prescription-card img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .prescription-details {
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+  
+  .prescription-name {
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .prescription-time {
+    color: gray;
+    font-size: 12px;
+  }
+  
+  .prescription-icon {
+    color: #FF6F61;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .appointment-card {
+    grid-column: 1;
+    grid-row: 2;
+  
+    align-items: center;
+    border: 1px solid #ddd;
+   
+    padding: 15px;
+    margin-bottom: 20px;
+  
+    width: auto;
+    max-height: 300px;
+
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.appointment-card2{
+  grid-column: 2;
+    grid-row: 2;
+
+  align-items: center;
+    border: 1px solid #ddd;
+   
+    padding: 15px;
+    margin-bottom: 20px;
+    
+    width: auto;
+    max-height: 300px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-header {
+ 
+}
+
+.doctor-info {
+ 
+}
+
+.appointment-time {
+
+  margin-top: 5px; /* Add some space above the appointment time */
+  color: gray; /* Optional styling for better visibility */
+}
+
+.hospital-image, .doctor-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 70%;
+    margin-right: 10px;
+}
+
+.appointment-details, .doctor-details {
+    display: inline-block;
+}
+
+.video-call-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.video-call-btn:hover {
+    background-color: #218838;
+}
+
+
+
+
+.calendar-appointments {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  #appointment-list {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  #appointment-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #appointment-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #appointment-list li:last-child {
+    border-bottom: none;
+  }
+  
+  #appointment-list h4 {
+    margin: 0;
+    font-size: 18px;
+  }
+
+
+
+  
+
+
+
+
+#header2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header2 h2 {
+  margin: 0;
+  color: #333;
+}
+
+#prevMonth, #nextMonth {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #ff9000;
+  transition: color 0.3s;
+}
+
+#prevMonth:hover, #nextMonth:hover {
+  color: #d68a00;
+}
+
+#calendarGrid {
+ 
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  margin-top: 10px;
+}
+
+.weekday {
+  font-weight: bold;
+  text-align: center;
+  color: #555;
+}
+
+.day {
+  padding: 15px;
+  background-color: #f0f0f0;
+  color: #000;
+  border-radius: 300px;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.day.current {
+  background-color: #ff9000;
+  color: #fff;
+}
+
+.day:hover {
+  background-color: #ffb84d;
+  transform: scale(1.05);
+}
+
+.empty {
+  background-color: transparent;
+  pointer-events: none;
+}
+  
+
+
+
+.card {
+  background-color: rgb(215, 242, 233);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  margin-right: 10px;
+  width:50px;
+  height: 50px;
+}
+
+.card-title h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.card-title p {
+  margin: 5px 0 0;
+  color: #888;
+}
+
+.card-footer {
+  margin-top: auto; /* Push button to the bottom */
+  text-align: right;
+}
+
+.view-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #007bff;
+}

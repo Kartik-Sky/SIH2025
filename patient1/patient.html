@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>patient</title>
+  <link rel="stylesheet" href="patient.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css' rel='stylesheet' />
+</head>
+<body>
+
+<div class="container">
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+     <div class="avatar-container">
+    <img class="avatar" src="avatar.png" alt="avatar">
+  </div>
+
+
+  <br><span class="avatar-label">Check your records</span>
+<br>
+  <div class="segmented-control">
+    <button data-type="prescriptions">PRESCRIPTIONS</button>
+    <button data-type="reports">REPORTS</button>
+  </div>
+  <br> 
+
+   <!-- Content Containers -->
+   <div id="prescriptions" class="sidebar-content">
+    <!-- Content for Prescriptions -->
+    <div class="prescription-card">
+      <img src="avatar1.jpg" alt="Olivia Wild">
+      <div class="prescription-details">
+        <p class="prescription-name">Olivia Wild</p>
+        <p class="prescription-time">12:00 - 12:45</p>
+      </div>
+      <span class="prescription-icon">👤</span>
+    </div>
+    
+
+    <div class="prescription-card">
+        <img src="avatar1.jpg" alt="Olivia Wild">
+        <div class="prescription-details">
+          <p class="prescription-name">Olivia Wild</p>
+          <p class="prescription-time">12:00 - 12:45</p>
+        </div>
+        <span class="prescription-icon">👤</span>
+      </div>
+      <div class="prescription-card">
+        <img src="avatar1.jpg" alt="Olivia Wild">
+        <div class="prescription-details">
+          <p class="prescription-name">Olivia Wild</p>
+          <p class="prescription-time">12:00 - 12:45</p>
+        </div>
+        <span class="prescription-icon">👤</span>
+      </div>
+    <!-- Add more prescription cards here -->
+  </div>
+
+  <div id="reports" class="sidebar-content">
+    <div class="prescription-card">
+        <img src="avatar1.jpg" alt="Olivia Wild">
+        <div class="prescription-details">
+          <p class="prescription-name">Olivia Wild</p>
+          <p class="prescription-time">12:00 - 12:45</p>
+        </div>
+        <span class="prescription-icon">👤</span>
+      </div>
+
+      <div class="prescription-card">
+        <img src="avatar1.jpg" alt="Olivia Wild">
+        <div class="prescription-details">
+          <p class="prescription-name">Olivia Wild</p>
+          <p class="prescription-time">12:00 - 12:45</p>
+        </div>
+        <span class="prescription-icon">👤</span>
+      </div>
+
+      
+  </div>
+</div>
+
+<div class="dashboard">
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Header -->
+    <div class="header">
+      <h2>Hi, Samantha W.</h2>
+      <p>Let’s track your health daily!</p>
+    </div>
+
+    <div class="appointment-card">
+        <div class="appointment-header">
+            <img src="hospital.jpg" alt="Hospital Image" class="hospital-image"><br>
+            <div class="appointment-details">
+                <h3>Manggis ST Hospital</h3>
+                <p>New York, USA</p>
+            </div>
+        </div>
+       </div>
+       <div class="appointment-card2">
+        <div class="doctor-info">
+            <img src="doctor.jpeg" alt="Doctor Image" class="doctor-image">
+            <br>
+            <div class="doctor-details">
+                <h4>Dr. Emilia Winson</h4>
+                <p>Physiotherapy</p>
+                <p><i class="fa fa-calendar"></i> <!-- Calendar Icon -->
+                  14 Mar 2022</p>
+                <p><i class="fa fa-clock"></i> <!-- Clock Icon -->
+                  09:00 PM</p>
+                
+            </div>
+        </div>
+        </div>
+       
+    
+    
+
+
+    <div class="calendar">
+      <div id="header2">
+          <button id="prevMonth">&lt;</button>
+          <h2 id="monthYear"></h2>
+          <button id="nextMonth">&gt;</button>
+      </div>
+      <div id="calendarGrid">
+          <!-- Weekday headers -->
+          <div class="weekday">S</div>
+          <div class="weekday">M</div>
+          <div class="weekday">T</div>
+          <div class="weekday">W</div>
+          <div class="weekday">T</div>
+          <div class="weekday">F</div>
+          <div class="weekday">S</div>
+          <!-- Days of the month will be dynamically generated here -->
+      </div>
+  </div>
+
+    
+   <!-- Patient Activities -->
+    <div class="activities">
+      <h3>Nearby Hospitals</h3>
+      <div class="card">
+        <div class="card-header">
+            <img src="nearby.png" alt="Profile Picture" class="profile-pic">
+            <div class="card-title">
+                <h3>Appollo </h3>
+                <p>chennai</p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="view-btn">→</button>
+        </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+          <img src="nearby.png" alt="Profile Picture" class="profile-pic">
+          <div class="card-title">
+              <h3>Apollo</h3>
+              <p>Chennai</p>
+          </div>
+      </div>
+      <div class="card-footer">
+          <button class="view-btn">→</button>
+      </div>
+  </div>
+    
+    </div>
+
+  
+    <div class="list">
+      
+    </div>
+
+    <div class="list">
+      
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+
+<script src="patient.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js'></script>
+<script>
+   
+        document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth', // Default view
+            initialDate: '2024-09-07',  // Initial date set
+            headerToolbar: {
+              left: 'prev,next today',
+              center: 'title',
+              right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            events: [
+              // Example events
+              {
+                title: 'Appointment with Dr. Emilia',
+                start: '2024-09-10',
+              },
+              {
+                title: 'Meeting',
+                start: '2024-09-15'
+              }
+            ]
+          });
+          calendar.render();
+        });
+    
+      
+</script>
+</body>
+</html>

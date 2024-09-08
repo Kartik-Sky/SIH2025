@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor</title>
+    <link rel="stylesheet" href="doctor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            
+            <nav>
+                <div class="profile-info">
+                    <img src="doctor.png" alt="Doctor" class="doctor-img">
+                    <h3 id="name">Dr. Gwen Noir</h3>
+
+                    <div class="name2">
+                    <div class="rating" data-rating="4.5">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <span id="type-doc">
+                        <h3>
+                        <div class="type">   <i class="fas fa-stethoscope"></i><div id="name">Infectious Disease Specialist</div></div>
+                           
+                    </span>
+                </div>
+                </div>
+
+
+
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <header class="header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search here...">
+                </div>
+                <div class="profile">
+                    <img src="profile-icon.png" alt="Profile">
+                </div>
+            </header>
+            
+            <section class="dashboard">
+                <!-- Revenue Section -->
+                <div class="card revenue">
+                    <h3>Appointment History</h3>
+                    <div class="appointment-card">
+                        <div class="appointment">
+                            <img src="h1.png" alt="Ucok Bendart" class="profile-pic">
+                            <div class="appointment-details">
+                                <h3>Bhavyata</h3>
+                                <p>Medical Checkup</p>
+                            </div>
+                            <span class="time"><i class="fas fa-calendar-alt"></i> March 14
+                                <br>
+                            <i class="fas fa-clock"></i>10:30 AM</span>
+                           
+                           
+                        </div>
+                    </div>
+                    <div class="appointment-card">
+                        <div class="appointment">
+                            <img src="h2.jpeg" alt="Ucok Bendart" class="profile-pic">
+                            <div class="appointment-details">
+                                <h3>Kaur</h3>
+                                <p>Screening</p>
+                            </div>
+                            <span class="time"><i class="fas fa-calendar-alt"></i> March 4
+                                <br>
+                            <i class="fas fa-clock"></i>04:30 PM</span>
+                           
+                        </div>
+                    </div>
+                    <ul>
+                  
+                    </ul>
+                </div>
+                
+                <!-- Today's Appointments Section -->
+                <div class="card-container">
+                    <h2>Today's Appointment</h2>
+        <div class="appointment-card">
+            <div class="appointment">
+                <img src="image4.png" alt="Ucok Bendart" class="profile-pic">
+                <div class="appointment-details">
+                    <h3>Ucok Bendart</h3>
+                    <p>First Visit</p>
+                </div>
+                <span class="time"><i class="fas fa-clock"></i> 10:00 AM</span>
+               
+            </div>
+        </div>
+        <div class="appointment-card">
+            <div class="appointment">
+                <img src="image3.png" alt="Mac Jansen" class="profile-pic">
+                <div class="appointment-details">
+                    <h3>Mac Jansen</h3>
+                    <p>Consultation</p>
+                </div>
+                <span class="time"><i class="fas fa-clock"></i> 10:00 AM</span>
+            </div>
+        </div>
+        <div class="appointment-card">
+            <div class="appointment">
+                <img src="image2.png" alt="Anastasy Gemash" class="profile-pic">
+                <div class="appointment-details">
+                    <h3>Anastasy Gemash</h3>
+                    <p>Consultation</p>
+                </div>
+                <span class="time"><i class="fas fa-clock"></i> 10:00 AM</span>
+            </div>
+        </div>
+        <div class="appointment-card">
+            <div class="appointment">
+                <img src="image1.png" alt="Jimmi Jazz" class="profile-pic">
+                <div class="appointment-details">
+                    <h3>Jimmi Jazz</h3>
+                    <p>First Visit</p>
+                </div>
+                <span class="time"><i class="fas fa-clock"></i> 10:00 AM</span>
+            </div>
+        </div>
+        <button class="see-all">See All</button>
+                </div>
+                
+                <!-- Profile Section -->
+                <div class="card profile">
+                    <div class="calendar">
+                        <div id="header2">
+                            <button id="prevMonth">&lt;</button>
+                            <h2 id="monthYear"></h2>
+                            <button id="nextMonth">&gt;</button>
+                        </div>
+                        <div id="calendarGrid">
+                            <!-- Weekday headers -->
+                            <div class="weekday">S</div>
+                            <div class="weekday">M</div>
+                            <div class="weekday">T</div>
+                            <div class="weekday">W</div>
+                            <div class="weekday">T</div>
+                            <div class="weekday">F</div>
+                            <div class="weekday">S</div>
+                            <!-- Days of the month will be dynamically generated here -->
+                        </div>
+                    </div>
+                  
+                </div>
+
+                <!-- Appointment History -->
+                <div class="card appointment-history">
+                    
+                </div>
+
+                <!-- Messages -->
+                <div class="card messages">
+                    
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="doctor.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar for Patient Queue -->
+        <aside class="sidebar">
+            <div class="logo">Dental Clinic</div>
+            <h3>Patient Queue</h3>
+            <div class="queue-filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Oldest</button>
+                <button class="filter-btn">Newest</button>
+            </div>
+            <ul class="patient-list">
+                <li class="patient">
+                    <img src="bessie-cooper.jpg" alt="Bessie Cooper">
+                    <div class="patient-info">
+                        <p>Bessie Cooper</p>
+                        <span>Register: 12 March 2023</span>
+                    </div>
+                </li>
+                <li class="patient active">
+                    <img src="jerome-bellingham.jpg" alt="Jerome Bellingham">
+                    <div class="patient-info">
+                        <p>Jerome Bellingham</p>
+                        <span>Register: 12 March 2023</span>
+                    </div>
+                </li>
+                <!-- Add more patients similarly -->
+            </ul>
+        </aside>
+
+        <!-- Main Content Section -->
+        <main class="main-content">
+            <!-- Patient Info and Appointment Schedule -->
+            <section class="patient-dashboard">
+                <div class="patient-header">
+                    <div class="patient-basic-info">
+                        <img src="jerome-bellingham.jpg" alt="Jerome Bellingham">
+                        <div>
+                            <h2>Jerome Bellingham <span class="member-badge">MEMBER</span></h2>
+                            <p>Joined Since: 12 March 2023</p>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button>Email</button>
+                        <button>Call</button>
+                        <button>Video</button>
+                        <button>Message</button>
+                    </div>
+                </div>
+
+                <div class="patient-details-grid">
+                    <!-- Basic Informational -->
+                    <div class="card basic-info">
+                        <h3>Basic Informational</h3>
+                        <ul>
+                            <li>Gender: Male</li>
+                            <li>Birthday: 12 August 2001</li>
+                            <li>Phone Number: +62 837 356 343 23</li>
+                            <li>Email: jeromebellingham93@gmail.com</li>
+                            <li>Sources: [Social Media Icons]</li>
+                        </ul>
+                    </div>
+
+                    <!-- Appointment Schedule -->
+                    <div class="card appointment-schedule">
+                        <h3>Appointment Schedule</h3>
+                        <ul>
+                            <li><strong>12 Oct 2023:</strong> Prosthetic Tooth Fabrication - Drg. Wade Warren</li>
+                            <li><strong>12 Sep 2023:</strong> Post-Surgical Care - Drg. Marvin McKinney</li>
+                            <li><strong>12 Aug 2023:</strong> Implant Placement - Drg. Floyd Miles</li>
+                        </ul>
+                    </div>
+
+                    <!-- Data of Assurance -->
+                    <div class="card assurance-info">
+                        <h3>Data of Assurance</h3>
+                        <p>234-234-232-32</p>
+                        <p>Expiry: 23/04/2024</p>
+                        <p>Status: Activated</p>
+                    </div>
+
+                    <!-- Member Dentialca -->
+                    <div class="card dentalca-info">
+                        <h3>Member Dentalca</h3>
+                        <p>Start Date: 12 Des 2023</p>
+                        <p>32 Days</p>
+                        <button>Extend</button>
+                    </div>
+
+                    <!-- History Dental -->
+                    <div class="card history-dental">
+                        <h3>History Dental</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Type Treatment</th>
+                                    <th>Date</th>
+                                    <th>Result Treatment</th>
+                                    <th>Payment Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#12324</td>
+                                    <td>Implant</td>
+                                    <td>12 Jun 2023</td>
+                                    <td>Well done</td>
+                                    <td>Pending</td>
+                                </tr>
+                                <tr>
+                                    <td>#20324</td>
+                                    <td>Route Canal</td>
+                                    <td>4 May 2023</td>
+                                    <td>Well done</td>
+                                    <td>Paid</td>
+                                </tr>
+                                <!-- Add more rows similarly -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Agreement of Document -->
+                    <div class="card document-agreement">
+                        <h3>Agreement of Document</h3>
+                        <ul>
+                            <li><a href="#">Agreement_Meditation.zip</a> (2.3 mb)</li>
+                            <li><a href="#">Provision of Information.pdf</a> (1.2 mb)</li>
+                            <!-- Add more documents similarly -->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
